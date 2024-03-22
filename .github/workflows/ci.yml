@@ -16,10 +16,12 @@ jobs:
 
   test-job:
     runs-on: ubuntu-lastest
+    needs: build-job
     steps:
       - run: echo "test jobs"
 
   deploy-job:
     runs-on: ubuntu-lastest
+    needs: test-job
     steps:
       - run: echo "deploy job to prodrution server"
