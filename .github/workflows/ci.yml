@@ -20,7 +20,7 @@ jobs:
     steps:
       - run: echo ${{ env.COMPANY_NAME }}
       - run: echo "My host is $MY_HOST and $FULLNAME"
-      - run: echo ${{ secrets.MYSQL.PASSWORD }}
+      - run: echo ${{ secrets.MYSQL.PASSEORD }}
       - run: echo "Hello ${{ github.actor }} $FULLNAME $COMPANY_NAME"
 
   test-job:
